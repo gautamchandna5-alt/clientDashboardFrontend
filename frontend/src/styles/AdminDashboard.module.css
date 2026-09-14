@@ -1,0 +1,116 @@
+.adminContainer {
+    max-width: 1000px;
+    margin: 50px auto;
+    font-family: sans-serif;
+}
+
+.adminHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.adminGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.formCard {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.formCardAlt {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.formCard h3, .formCardAlt h3 {
+    margin-top: 0;
+}
+
+.adminForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.msgSuccess {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.msgError {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btnLogout {
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btnLogout:hover { background-color: #c82333; }
+
+.btnSubmitSuccess {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btnSubmitSuccess:hover { background-color: #218838; }
+
+.btnSubmitPrimary {
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btnSubmitPrimary:hover { background-color: #005bb5; }
+
+.btnDelete {
+    padding: 6px 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.btnDelete:hover { background-color: #c82333; }
+
+/* Lists */
+.listItem {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listItemMeta {
+    color: gray;
+    display: block;
+    margin-top: 4px;
+}

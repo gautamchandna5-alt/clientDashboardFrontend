@@ -1,0 +1,128 @@
+.pmContainer {
+    max-width: 1000px;
+    margin: 50px auto;
+    font-family: sans-serif;
+}
+
+.pmHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.pmHeader h2 {
+    margin: 0;
+}
+
+.pmSubtitle {
+    color: gray;
+    margin: 5px 0 0 0;
+}
+
+.pmGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.formCard {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.formCard h3 {
+    margin-top: 0;
+}
+
+.pmForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.msgSuccess {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.msgError {
+    color: red;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffe6e6;
+    border-radius: 4px;
+}
+
+/* Buttons */
+.btnLogout {
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btnLogout:hover { background-color: #c82333; }
+
+.btnSubmit {
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btnSubmit:hover { background-color: #005bb5; }
+
+/* Lists */
+.emptyState {
+    color: gray;
+    padding: 20px;
+    border: 1px dashed #ccc;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.taskItem {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.taskItem h4 {
+    margin: 0 0 5px 0;
+}
+
+.taskMeta {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.statusPending {
+    color: #cc7700;
+    font-weight: bold;
+}
+
+.statusCompleted {
+    color: green;
+    font-weight: bold;
+}

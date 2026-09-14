@@ -1,0 +1,108 @@
+.devContainer {
+    max-width: 800px;
+    margin: 50px auto;
+    font-family: sans-serif;
+}
+
+.devHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.devHeader h2 {
+    margin: 0;
+}
+
+.devSubtitle {
+    color: gray;
+    margin: 5px 0 0 0;
+}
+
+.msgError {
+    color: red;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffe6e6;
+    border-radius: 4px;
+}
+
+.btnLogout {
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btnLogout:hover {
+    background-color: #c82333;
+}
+
+.emptyState {
+    color: gray;
+    padding: 20px;
+    border: 1px dashed #ccc;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.taskItem {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.taskItemCompleted {
+    background-color: #f0fff0;
+}
+
+.taskInfo h4 {
+    margin: 0 0 5px 0;
+}
+
+.taskProject {
+    color: gray;
+    font-size: 14px;
+}
+
+.taskActions {
+    text-align: right;
+}
+
+.statusPending {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #cc7700;
+}
+
+.statusCompleted {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: green;
+}
+
+.btnComplete {
+    padding: 6px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btnComplete:hover {
+    background-color: #218838;
+}
