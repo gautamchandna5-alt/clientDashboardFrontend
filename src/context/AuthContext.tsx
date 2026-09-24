@@ -26,23 +26,23 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         accessToken: null,
     });
 
-    // 1. Add a loading state to pause the UI during the refresh check
     const [isLoading, setIsLoading] = useState(true);
 
-    // 2. Automatically ping the backend for a new access token on page load
     useEffect(() => {
         const refreshSession = async () => {
             try {
-                // Ensure your backend uses router.get() for the refresh route, or change this to api.post()
+                // Adjust to api.post('/auth/refresh') if your backend uses POST instead of GET
                 const response = await api.get('/auth/refresh'); 
                 const { user, accessToken } = response.data;
                 
+                // Inject token into Axios headers for all future requests
+                api.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+                
                 setAuthState({ user, accessToken });
             } catch (error) {
-                // If it fails (no cookie, expired cookie), they simply remain logged out
                 console.log("No active session found.");
+                delete api.defaults.headers.common['Authorization'];
             } finally {
-                // 3. Un-pause the UI whether the refresh succeeded or failed
                 setIsLoading(false);
             }
         };
@@ -51,13 +51,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }, []);
 
     const setAuth = (user: User, token: string) => {
+        api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         setAuthState({ user, accessToken: token });
     };
 
     const clearAuth = async () => {
+        delete api.defaults.headers.common['Authorization'];
         setAuthState({ user: null, accessToken: null });
         
-        // Highly recommended: tell the backend to destroy the HttpOnly cookie
         try {
             await api.post('/auth/logout');
         } catch (error) {
@@ -65,7 +66,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         }
     };
 
-    // 4. Show a loading screen instead of the login screen while checking the session
     if (isLoading) {
         return <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Loading session...</div>;
     }
