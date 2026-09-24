@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         const refreshSession = async () => {
             try {
                 // Adjust to api.post('/auth/refresh') if your backend uses POST instead of GET
-                const response = await api.get('/auth/refresh'); 
+                const response = await api.post('/auth/refresh'); 
                 const { user, accessToken } = response.data;
                 
                 // Inject token into Axios headers for all future requests
